@@ -1,0 +1,3 @@
+tamago_feed_render_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: TamagoFeedRenderBundle:Default:index }
