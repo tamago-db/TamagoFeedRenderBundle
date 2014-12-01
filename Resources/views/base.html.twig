@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}TamagoDB-News{% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ asset('bundles/tamagofeedrender/css/custom.css') }}">
+
+</head>
+
+<body>
+<div class="container-fluid">
+    <header class="row">
+        <div class="col-sm-4"> </div>
+        <div class="col-sm-8"> </div>
+    </header>
+    <div class="content row">
+
+        {% block content %} {% endblock %}
+
+
+    </div><!--Content end-->
+
+
+</div><!--container-->
+
+<footer>
+    <p>&copy; 2014 TamagoDB</p>
+</footer>
+
+
+
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
+</body>
+</html>
