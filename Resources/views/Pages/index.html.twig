@@ -13,7 +13,7 @@
     {% for feed in feed %}
         <h3><a href="{{ feed.link }}" title="{{ feed.title }}">{{ feed.title }}</a></h3>
         <small><em>Posted on {{ feed.date }}</em></small>
-        <p>{{ feed.desc }}</p>
+        <p>{{ feed.desc|raw }}</p>
     {% endfor %}
     </div>
 

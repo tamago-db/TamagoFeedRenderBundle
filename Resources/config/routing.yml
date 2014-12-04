@@ -1,3 +1,0 @@
-tamago_feed_render_homepage:
-    path:     /news
-    defaults: { _controller: TamagoFeedRenderBundle:FeedRender:index}
