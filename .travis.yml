@@ -18,5 +18,5 @@ script: phpunit --coverage-text
 
 notifications:
   email:
-    - evan.owens@tamago-db.com
+    - runcong@gmail.com
 
