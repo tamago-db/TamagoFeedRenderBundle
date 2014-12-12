@@ -6,7 +6,7 @@ Simple bundle to render RSS news feeds within an app
 Add the package to your composer.json file
 
 ```
-"Tamago/FeedRenderBundle": "dev-master",
+"tamago/feed-render-bundle": "dev-master",
 ```
 ##Configuration
 
