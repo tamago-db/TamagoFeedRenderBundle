@@ -1,6 +1,8 @@
 #TamagoFeedRenderBundle
 Simple bundle to render RSS news feeds within an app
 
+[![Build Status](https://travis-ci.org/tamago-db/TamagoFeedRenderBundle.svg?branch=master)](https://travis-ci.org/tamago-db/TamagoFeedRenderBundle)
+
 ## Installation
 
 Add the package to your composer.json file
