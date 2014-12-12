@@ -1,0 +1,23 @@
+{
+    "name": "tamago/feed-render-bundle",
+    "type": "symfony-bundle",
+    "description": "Simple bundle to quickly render RSS feeds",
+    "keywords": ["symfony", "bundle", "rss"],
+    "homepage": "http://www.tamago-db.com/",
+    "license": "MIT",
+    "authors": [
+        {
+	    "name": "Tony Chen",
+            "email": "runcong@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.3",
+	"ext-curl": "*",
+        "symfony/symfony": "~2.6",
+	"white-october/pagerfanta-bundle": "~1.0.2"
+    },
+    "autoload": {
+        "psr-4": { "Tamago\\FeedRenderBundle\\": "" }
+    }
+}
