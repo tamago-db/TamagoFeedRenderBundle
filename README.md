@@ -15,7 +15,7 @@ Edit config.yml
 ```
 parameters:
     tamago_feed_render.url: 'http://rss.indeed.com/rss?q=RSS'
-    tamago_feed_render.MaxPerPage: 10
+    tamago_feed_render.max_per_page: 10
 ```
 
 ## License
