@@ -2,15 +2,20 @@
 
 namespace Tamago\FeedRenderBundle\Controller;
 
+use Pagerfanta\Adapter\ArrayAdapter;
+use Pagerfanta\Pagerfanta;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+
+use Symfony\Component\HttpFoundation\Request;
 
 class FeedRenderController extends Controller
 {
-    public function indexAction()
+    public function indexAction(Request $request)
     {
+        $page = $request->query->get('page');
 
         $rss = new \DOMDocument();
-        $rss->load('http://wordpress.org/news/feed/');
+        $rss->load($this->container->getParameter('tamago_feed_render.url'));
         $feed = array();
         foreach ($rss->getElementsByTagName('item') as $node) {
             $item = array (
@@ -22,6 +27,11 @@ class FeedRenderController extends Controller
             array_push($feed, $item);
         }
 
-        return $this->render('TamagoFeedRenderBundle:Pages:index.html.twig', array('feed'=>$feed,));
+        $adapter = new ArrayAdapter($feed);
+        $pagerfanta = new Pagerfanta($adapter);
+        $pagerfanta->setMaxPerPage($this->container->getParameter('tamago_feed_render.MaxPerPage'));
+
+
+        return $this->render('TamagoFeedRenderBundle:Pages:index.html.twig', array('pagerfanta'=>$pagerfanta,));
     }
 }
