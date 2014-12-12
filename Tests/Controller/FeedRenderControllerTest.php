@@ -17,7 +17,7 @@ class FeedRenderControllerTest extends WebTestCase
 
         $this->assertTrue($crawler->filter('html:contains("News")')->count() > 0);
 
-        $MaxFeed = $client->getContainer()->getParameter('tamago_feed_render.MaxPerPage');
+        $MaxFeed = $client->getContainer()->getParameter('tamago_feed_render.max_per_page');
 
         $this->assertEquals($MaxFeed,
             $crawler->filter('h3')->count()

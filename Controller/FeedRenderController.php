@@ -29,7 +29,7 @@ class FeedRenderController extends Controller
 
         $adapter = new ArrayAdapter($feed);
         $pagerfanta = new Pagerfanta($adapter);
-        $pagerfanta->setMaxPerPage($this->container->getParameter('tamago_feed_render.MaxPerPage'));
+        $pagerfanta->setMaxPerPage($this->container->getParameter('tamago_feed_render.max_per_page'));
 
 
         return $this->render('TamagoFeedRenderBundle:Pages:index.html.twig', array('pagerfanta'=>$pagerfanta,));
