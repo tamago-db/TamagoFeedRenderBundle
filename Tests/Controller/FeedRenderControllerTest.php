@@ -3,14 +3,11 @@
 namespace Tamago\FeedRenderBundle\Tests\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
-use Tamago\FeedRenderBundle\Controller\FeedRenderController;
 
 class FeedRenderControllerTest extends WebTestCase
 {
     public function testIndex()
     {
-
-
         $client = static::createClient();
 
         $crawler = $client->request('GET', '/news');
