@@ -12,8 +12,6 @@ class FeedRenderController extends Controller
 {
     public function indexAction(Request $request)
     {
-        $page = $request->query->get('page');
-
         $rss = new \DOMDocument();
         $rss->load($this->container->getParameter('tamago_feed_render.url'));
         $feed = array();
@@ -30,6 +28,7 @@ class FeedRenderController extends Controller
         $adapter = new ArrayAdapter($feed);
         $pagerfanta = new Pagerfanta($adapter);
         $pagerfanta->setMaxPerPage($this->container->getParameter('tamago_feed_render.max_per_page'));
+        $pagerfanta->setCurrentPage($request->query->get('page'));
 
 
         return $this->render('TamagoFeedRenderBundle:Pages:index.html.twig', array('pagerfanta'=>$pagerfanta,));
