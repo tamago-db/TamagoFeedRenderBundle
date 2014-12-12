@@ -19,11 +19,8 @@ script: phpunit --coverage-text
 
 notifications:
   email:
-<<<<<<< HEAD
     - evan.owens@tamago-db.com
     - nian.zhang001@umb.edu
     - prohitnaidu@hotmail.com
     - runcong@gmail.com
     - ty90511@gmail.com
-
->>>>>>> 5bc43da2754626ddd965d62346c2c4de0637bfc1
