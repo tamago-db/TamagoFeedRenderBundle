@@ -10,7 +10,7 @@ class FeedRenderControllerTest extends WebTestCase
     {
         $client = static::createClient();
 
-        $crawler = $client->request('GET', '/news');
+        $crawler = $client->request('GET', '/feed');
 
         $this->assertTrue($crawler->filter('html:contains("News")')->count() > 0);
 

@@ -10,7 +10,7 @@ use Symfony\Component\HttpFoundation\Request;
 
 class FeedRenderController extends Controller
 {
-    public function indexAction(Request $request)
+    public function indexAction($page)
     {
         $rss = new \DOMDocument();
         $rss->load($this->container->getParameter('tamago_feed_render.url'));
@@ -27,8 +27,8 @@ class FeedRenderController extends Controller
 
         $adapter = new ArrayAdapter($feed);
         $pagerfanta = new Pagerfanta($adapter);
+        $pagerfanta->setCurrentPage($page);
         $pagerfanta->setMaxPerPage($this->container->getParameter('tamago_feed_render.max_per_page'));
-        $pagerfanta->setCurrentPage($request->query->get('page'));
 
 
         return $this->render('TamagoFeedRenderBundle:Pages:index.html.twig', array('pagerfanta'=>$pagerfanta,));
