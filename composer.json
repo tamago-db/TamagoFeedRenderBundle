@@ -9,6 +9,10 @@
         {
             "name": "Tony Chen",
             "email": "runcong@gmail.com"
+        },
+        {
+            "name": "Evan Owens",
+            "email": "evan.owens@tamago-db.com"
         }
     ],
     "require": {
@@ -18,6 +22,6 @@
         "white-october/pagerfanta-bundle": "~1.0.2"
     },
     "autoload": {
-	"psr-4": { "Tamago\\FeedRenderBundle\\": "" }
+        "psr-4": { "Tamago\\FeedRenderBundle\\": "" }
     }
 }
